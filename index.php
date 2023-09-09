@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- from laptop -->
+    <!-- from computer-->
 </body>
 </html>
