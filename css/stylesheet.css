@@ -76,6 +76,10 @@ body{
     font-size: 36px;
     text-align: center;
 }
+.wrappar h2{
+    font-size: 36px;
+    text-align: center;
+}
 
 .wrapper .input-box{
     width: 100%;
