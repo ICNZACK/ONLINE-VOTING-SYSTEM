@@ -68,12 +68,12 @@
 }
 
 .content h2 {
-    font-size: 3em;
-    letter-spacing: .03em;
+    font-size: 10em;
+    letter-spacing: .1.2em;
 }
 
 .content p {
-    margin: 10px 0 40px;
+    margin: 100px 0 200px;
 }
 .content a {
     color: #fff;
