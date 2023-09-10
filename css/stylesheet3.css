@@ -62,8 +62,9 @@
     padding: 80px 100px 0;
 }
 .Home .content {
-    max-width: 600px;
+    max-width: 1200px;
     color: #fff;
+    text-align: center;
 }
 
 .content h2 {
