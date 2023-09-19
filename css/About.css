@@ -10,20 +10,19 @@ body{
     width: 100%;
 }
 header{
-background-color: transparent;
+position:relative;
 color: #fff;
-padding: 20px;
-text-align: center;
 }
 
 #aboutContent {
     color: #fff;
+    font-size: 15px;
     padding: 20px;
-    text-align:left;
 }
 
 #team {
     color: #fff;
     padding: 20px;
     text-align: left;
+    font-size: 15px;
 }
