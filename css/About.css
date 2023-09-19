@@ -51,6 +51,7 @@ header .logo {
 header{
 position:relative;
 color: #fff;
+text-align: left;
 }
 
 #aboutContent {
