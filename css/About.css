@@ -10,5 +10,8 @@ body{
     width: 100%;
 }
 header{
-
+background-color: transparent;
+color: #fff;
+padding: 20px;
+text-align: center;
 }
