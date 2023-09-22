@@ -73,12 +73,17 @@ body{
 .wrappar h1{
     font-size: 36px;
     text-align: center;
+    color: #fff;
 }
 .wrappar h1{
     font-size: 36px;
     text-align: center;
 }
 
+.wrappar h1{
+    font-size: 36px;
+    text-align: center;
+}
 .wrappar .input-box{
     width: 100%;
     height: 50px;
@@ -104,4 +109,21 @@ body{
 
 .input-box i{
     position: relative;
+    left: 90%;
+    bottom: 90%;
+    font-size: 25px;
+    color: #fff;
+}
+
+.wrappar .btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, -1);
+    cursor: pointer;
+    font-size: #333;
+    font-weight: 600;
 }
