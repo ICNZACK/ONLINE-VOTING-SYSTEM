@@ -49,7 +49,7 @@ header .logo {
     background: #fff;
     border-radius: 5px; 
     transform: scaleX(0);
-    transform: .5s;
+    transition: .5s;
 }
 .nav a:hover::after {
     transform: scaleX(1);
