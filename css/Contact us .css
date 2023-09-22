@@ -23,3 +23,11 @@
     color: #fff;
     text-decoration: none;
 }
+
+.nav a{
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 40px;
+}
