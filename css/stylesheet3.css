@@ -73,14 +73,14 @@
 }
 
 .content p {
-    margin: 50px 0 100px;
+    margin: 50px 0 50px;
 }
 .content a {
     color: #fff;
     text-decoration: none;
     border: 2px solid #fff;
-    font-weight: 900;
-    padding: 50px 1000px;
+    font-weight: 100;
+    padding: 50px 50px;
     border-radius: 30px;
     transition: .5s;
 }
@@ -95,7 +95,7 @@
             padding: 0;
         }
         .container {
-            max-width: 800px;
+            max-width: 50px;
             margin: 0 auto;
             padding: 20px;
             background-color: #fff;
