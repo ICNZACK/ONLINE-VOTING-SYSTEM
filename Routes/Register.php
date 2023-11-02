@@ -13,10 +13,10 @@
             <ion-icon name="logo-ionic"></ion-icon>WeVote
         </a>
         <nav class="nav">
-            <a href="../online voting system/index.html">Home</a>
-            <a href="../online voting system/Routes/About Us.html">About Us</a>
-            <a href="../online voting system/Routes/Contact Us.html">Contact Us</a>
-            <a href="../online voting system/Routes/login.html">Login</a>
+            <a href="../index.html">Home</a>
+            <a href="../Routes/About Us.html">About Us</a>
+            <a href="../Routes/Contact Us.html">Contact Us</a>
+            <a href="../Routes/login.html">Login</a>
         </nav>
     </header>
     <div class="container">
