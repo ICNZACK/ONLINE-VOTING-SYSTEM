@@ -88,14 +88,14 @@
     background:black;
 }
         body {
-
-            display: flex;
+        
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             background: url('homepagejpg.jpg') no-repeat;
             background-size: cover;
             background-position: center;
+
         }
         .container {
             max-width: 50px;
