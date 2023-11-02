@@ -15,7 +15,7 @@
                 <p id="result"></p>
                 <div class="input-box">
                     <i class='bx bxs-user'></i>
-                    <input type="text" name="Username" placeholder="Username">
+                    <input type="text" name="Username" placeholder="Voter Id">
                 </div>
                 <div class="input-box">
                     <i class='bx bxs-mobile'></i>
