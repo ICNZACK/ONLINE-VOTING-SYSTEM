@@ -8,6 +8,17 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+<header class="header">
+        <a href="#" class="logo">
+            <ion-icon name="logo-ionic"></ion-icon>WeVote
+        </a>
+        <nav class="nav">
+            <a href="../online voting system/index.html">Home</a>
+            <a href="../online voting system/Routes/About Us.html">About Us</a>
+            <a href="../online voting system/Routes/Contact Us.html">Contact Us</a>
+            <a href="../online voting system/Routes/login.html">Login</a>
+        </nav>
+    </header>
     <div class="container">
         <div class="form-box">
             <form action="" name="Formfill">
