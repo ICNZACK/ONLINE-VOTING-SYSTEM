@@ -82,21 +82,7 @@ body{
     padding: 40px;
 }
 
-.wrapper .icon-close{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 35px;
-    height: 35px;
-    background: rgb(250, 248, 248);
-    font-size: 2em;
-    color: rgba(3, 3, 3, 0.973);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom-left-radius: 20px;
-    cursor: pointer;
-}
+
 .form-box h2{
     font-size: 2em;
     color: #faf7f7;
