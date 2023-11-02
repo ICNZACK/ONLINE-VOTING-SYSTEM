@@ -15,7 +15,6 @@
         <nav class="nav">
             <a href="../index.html">Home</a>
             <a href="../Routes/About Us.html">About Us</a>
-            <a href="../Routes/Contact Us.html">Contact Us</a>
             <a href="../Routes/login.html">Login</a>
         </nav>
     </header>
