@@ -13,7 +13,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $sql= "INSERT INTO `voters` (`Voter_id`, `phone_number`, `password`, `date`) VALUES ( '$username', '$mobile', '$password', current_timestamp())";
         $result = mysqli_query($conn, $sql);
         if($result){
-            $showAlert = false;
+            $showAlert = true;
         }
     }
 }
@@ -46,17 +46,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="alert alert-success alert-dismissible fade show" role="alert">
         <strong>Success!</strong> You now create an account and now login....
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>';
+    </div>';
     }
-?>
+    ?>
     <div class="container">
         <div class="form-box">
-            <form action="" method="POST" name="Formfill">
+            <form action="Register.php" method="POST" name="Formfill">
                 <h2>Register</h2>
                 <p id="result"></p>
                 <div class="input-box">
                     <i class='bx bxs-user'></i>
-                    <input type="text" name="username" placeholder="Voter Id" id="voterid">
+                    <input type="text" name="username" placeholder="Voter Id" id="username">
                 </div>
                 <div class="input-box">
                     <i class='bx bxs-mobile'></i>
