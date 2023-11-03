@@ -1,5 +1,23 @@
 <?php
-include '../Routes/_dbconnect.php';
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $showAlert= false;
+    include '../Routes/_dbconnect.php';
+    $username = $_POST["username"];
+    $mobile = $_POST["mobile"];
+    $password = $_POST["password"];
+    $cpassword = $_POST["cpassword"];
+
+    $exists = false;
+
+    if(($password==$cpassword) && $exists=false){
+        $sql= "INSERT INTO `voters` (`Voter_id`, `phone_number`, `password`, `date`) VALUES ( '$username', '$mobile', '$password', current_timestamp())";
+        $result = mysqli_query($conn, $sql);
+        if($result){
+            $showAlert = false;
+        }
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,30 +40,35 @@ include '../Routes/_dbconnect.php';
             <a href="../Routes/login.php">Login</a>
         </nav>
     </header>
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+    <?php
+    if($showAlert){ 
+    echo'
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!</strong> You now create an account and now login....
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
+</div>';
+    }
+?>
     <div class="container">
         <div class="form-box">
-            <form action="" name="Formfill">
+            <form action="" method="POST" name="Formfill">
                 <h2>Register</h2>
                 <p id="result"></p>
                 <div class="input-box">
                     <i class='bx bxs-user'></i>
-                    <input type="text" name="Username" placeholder="Voter Id">
+                    <input type="text" name="username" placeholder="Voter Id" id="voterid">
                 </div>
                 <div class="input-box">
                     <i class='bx bxs-mobile'></i>
-                    <input type="number" name="Mobile" placeholder="Enter Mobile">
+                    <input type="number" name="mobile" placeholder="Enter Mobile" id="mobile">
                 </div>
                 <div class="input-box">
                     <i class='bx bxs-lock-alt'></i>
-                    <input type="password" name="Password" placeholder="Password">
+                    <input type="password" name="password" placeholder="Password" id="password">
                 </div>
                 <div class="input-box">
                     <i class='bx bxs-lock-alt'></i>
-                    <input type="password" name="cPassword" placeholder="Confirm Password">
+                    <input type="password" name="cpassword" placeholder="Confirm Password" id="cpassword">
                 </div>
                 <div class="button">
                     <input type="submit"  class="btn" value="Register">
