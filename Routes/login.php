@@ -17,7 +17,7 @@
         <nav class="nav">
             <a href="../index.html">Home</a>
             <a href="../Routes/About Us.html">About Us</a>
-            <a href="../Routes/login.html">Login</a>
+            <a href="../Routes/login.php">Login</a>
         </nav>
     </header>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
