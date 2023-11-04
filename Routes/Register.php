@@ -48,7 +48,7 @@
         </div>
         <br>
         <div class="input-box">
-            <label for="role">Select:</label>
+            <label for="role">Select your role:</label>
                     <select name="role">
                         <option value="1">Voter</option>
                         <option value="2">Candidate</option>
