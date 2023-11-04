@@ -3,41 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Voting System - Registration</title>
-    <link rel="stylesheet" href="../css/stylesheet2.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Registration</title>
+    <link rel="stylesheet" href="stylesheet2.css">
 </head>
 <body>
-    <div class="container">
-        <div class="form-box">
-            <form action="" name="Formfill">
-                <h2>Register</h2>
-                <p id="result"></p>
-                <div class="input-box">
-                    <i class='bx bxs-user'></i>
-                    <input type="text" name="Username" placeholder="Username">
-                </div>
-                <div class="input-box">
-                    <i class='bx bxs-mobile'></i>
-                    <input type="number" name="Mobile" placeholder="Enter Mobile">
-                </div>
-                <div class="input-box">
-                    <i class='bx bxs-lock-alt'></i>
-                    <input type="password" name="Password" placeholder="Password">
-                </div>
-                <div class="input-box">
-                    <i class='bx bxs-lock-alt'></i>
-                    <input type="password" name="cPassword" placeholder="Confirm Password">
-                </div>
-                <div class="button">
-                    <input type="submit"  class="btn" value="Register">
-                </div>
-                <div class="group">
-                    <span><a href="#">Forget-Password</a></span>
-                    <span><a href="../Routes/login.html">Login</a></span>
-                </div>
-            </form>
+
+    <header class="header">
+        <a href="#" class="logo">
+            <ion-icon name="logo-ionic"></ion-icon>WeVote
+        </a>
+        <nav class="nav">
+            <a href="../index.html">Home</a>
+            <a href="../Routes/About Us.html">About Us</a>
+            <a href="../Routes/login.php">Login</a>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+    <form action="Register.php" method="POST">
+        <h1>Registration</h1>
+        <div class="input-box">
+            <label for="name">Voter Id:</label>
+            <input type="Name" name="voterid" placeholder="Voter id" required>
         </div>
+        <div class="input-box">
+            <label for="Number">Phone Number:</label>
+            <input type="Number" name="number" placeholder="Enter Number" required>
+        </div>
+        <div class="input-box">
+            <label for="text">Email:</label>
+            <input type="text" name="email" placeholder="Enter Email" required>
+        </div>
+        <div class="input-box">
+            <label for="text">Password</label>
+            <input type="password" name="password" placeholder="Enter password" required>
+        </div>
+        <div class="input-box">
+            <label for="text">Confirm Password:</label>
+            <input type="password" name="cpassword" placeholder="Enter confirm password" required>
+        </div>
+        <div class="input-box">
+            <label for="file">Candidate Photo:</label>
+            <input type="File" name="photo" required>
+        </div>
+        <br>
+        <div class="input-box">
+            <label for="role">Select your role:</label>
+                    <select name="role">
+                        <option value="1">Voter</option>
+                        <option value="2">Candidate</option>
+                    </select>
+                </div>
+            <button type="submit" class="btn">Register</button>
+            <div class="register-link">
+                <p>have an account ?
+                <a href="login.php">Login</a>
+                </p>
+            </div>
+            </form>
     </div>
+
 </body>
 </html>

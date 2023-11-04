@@ -75,7 +75,7 @@
                 <button type="submit" class="btn">Login</button>
                 <div class="login-register">
                     <p>Don't have an account?
-                        <a href="../Routes/Register.php" class="register-link">Register</a>
+                        <a href="../Routes/Register.html" class="register-link">Register</a>
                     </p>
                 </div>
             </form>
