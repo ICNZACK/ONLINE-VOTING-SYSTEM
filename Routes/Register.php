@@ -1,5 +1,5 @@
 <?php
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+/*if($_SERVER["REQUEST_METHOD"] == "POST"){
     $showAlert= false;
     $showError = false;
     include '../Routes/_dbconnect.php';
@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $showError = "Password do not match";
     }
 }
-
+*/
 ?>
 <!DOCTYPE html>
 <html lang="en">

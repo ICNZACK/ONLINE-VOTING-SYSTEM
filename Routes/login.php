@@ -1,5 +1,5 @@
 <?php
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+/*if($_SERVER["REQUEST_METHOD"] == "POST"){
     $login= false;
     $showError = false;
     include '../Routes/_dbconnect.php';
@@ -19,7 +19,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $showError = "invalid username and password ";
     }
 
-
+*/
 ?>
 <!DOCTYPE html>
 <html lang="en">

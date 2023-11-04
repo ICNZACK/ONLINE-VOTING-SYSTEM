@@ -1,15 +1,10 @@
 <?php
-$server = "localhost";
-$username = "root";
-$password = "";
-$database = "voting_database";
+$connect = mysqli_connect("localhost", "root", "", "voting_database") or die("connection failed");
 
-$conn = mysqli_connect($server, $username, $password, $database);
-
-if(!$conn){
-   /* echo "connected";
+if($connect){
+    echo "connected";
 }
-else{*/
-    die("Error".mysqli_connect_error());
+else{
+    echo "not connected";
 }
 ?>
