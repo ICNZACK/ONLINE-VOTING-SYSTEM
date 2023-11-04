@@ -23,14 +23,6 @@
     <form action="" method="POST">
         <h1>Registration</h1>
         <div class="input-box">
-            <label for="Name">Full Name:</label>
-            <input type="Name" name="name" placeholder="Enter Full Name" required>
-        </div>
-        <div class="input-box">
-            <label for="Date">Date Of Birth:</label>
-            <input type="Date" name="Date" placeholder="dd-mm-yy" required>
-        </div>
-        <div class="input-box">
             <label for="name">Voter Id:</label>
             <input type="Name" name="voterid" placeholder="Voter id" required>
         </div>
@@ -54,6 +46,14 @@
             <label for="file">Candidate Photo:</label>
             <input type="File" name="photo" required>
         </div>
+        <br>
+        <div class="input-box">
+            <label for="role">Select:</label>
+                    <select name="role">
+                        <option value="1">Voter</option>
+                        <option value="2">Candidate</option>
+                    </select>
+                </div>
             <button type="submit" class="btn">Register</button>
             <div class="register-link">
                 <p>have an account ?
