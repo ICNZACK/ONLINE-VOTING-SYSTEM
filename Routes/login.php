@@ -1,67 +1,32 @@
+<?php
+    session_start();
+    include("_dbconnect.php");
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatibl" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Voting System-Login</title>
-    <link rel="stylesheet" href="../css/stylesheet.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
+    $voterid = $_POST['voterid'];
+    $password = $_POST['password'];
+    $role = $_POST['role'];
 
-<body>
-    <header class="header">
-        <a href="#" class="logo">
-            <ion-icon name="logo-ionic"></ion-icon>WeVote
-        </a>
-        <nav class="nav">
-            <a href="../index.html">Home</a>
-            <a href="../Routes/About Us.html">About Us</a>
-            <a href="../Routes/login.php">Login</a>
-        </nav>
-    </header>
+    $check = mysqli_query($connect, "SELECT * from votes WHERE Voter_id='$voterid' AND password='$password' AND role='$role'");
+    if(mysqli_num_row($check)>0){
+        $userdata = mysqli_fetch_array($check)
+        $groups = mysqli_query($connect, "SELECT * FROM voters WHERE role=2")
+        $groupsdata = mysqli_fetch_all($groups, MYSQLI_ASSOC);
 
+        $_SESSION['userdata'] = $userdata;
+        $_SESSION['groupsdata'] = $groupsdata; 
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <div class="wrapper">
-        <div class="form-box login">
-            <h2>Login</h2>
-            <form action="../Routes/login.php" method= "post">
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
-                    <input type="text" required>
-                    <label>Username</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
-                    <label>Password</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="settings"></ion-icon></span>
-                    <select name="role">
-                        <option value="1">Voter</option>
-                        <option value="2">Candidate</option>
-                    </select>
-                </div>
-                <div class="remember-forgot">
-                    <label ><input type="checkbox">Remember me</label>
-                    <a href="#">Forgot Password?</a>
-                </div>
-                <button type="submit" class="btn">Login</button>
-                <div class="login-register">
-                    <p>Don't have an account?
-                        <a href="../Routes/Register.html" class="register-link">Register</a>
-                    </p>
-                </div>
-            </form>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
-</html>
+        echo '
+        <script>
+        window.location = "dashboard.php";
+        </script>
+        ';
+    }
+    else{
+        echo '
+        <script>
+        alert("Invalide Cradential or User not found....");
+        window.location = "login.php";
+        </script>
+        ';
+    }
+?>
