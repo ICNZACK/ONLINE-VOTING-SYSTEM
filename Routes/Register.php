@@ -1,40 +1,14 @@
-<?php
-/*if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $showAlert= false;
-    $showError = false;
-    include '../Routes/_dbconnect.php';
-    $username = $_POST["username"];
-    $mobile = $_POST["mobile"];
-    $password = $_POST["password"];
-    $cpassword = $_POST["cpassword"];
-
-    $exists = false;
-
-    if(($password==$cpassword) && $exists=false){
-        $sql= "INSERT INTO `voters` (`Voter_id`, `phone_number`, `password`, `date`) VALUES ( '$username', '$mobile', '$password', current_timestamp())";
-        $result = mysqli_query($conn, $sql);
-        if($result){
-            $showAlert = true;
-        }
-    }
-    else{
-        $showError = "Password do not match";
-    }
-}
-*/
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Voting System - Registration</title>
-    <link rel="stylesheet" href="../css/stylesheet2.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Registration</title>
+    <link rel="stylesheet" href="stylesheet2.css">
 </head>
 <body>
-<header class="header">
+    
+    <header class="header">
         <a href="#" class="logo">
             <ion-icon name="logo-ionic"></ion-icon>WeVote
         </a>
@@ -44,55 +18,50 @@
             <a href="../Routes/login.php">Login</a>
         </nav>
     </header>
-<?php 
-if($showAlert){
-    echo '
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Success!</strong> You now create an account and now login....
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>';
-}   
 
-if($showError){
-    echo '
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Error!</strong> '. $showError.'
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>';
-}   
-?>
-    <div class="container">
-        <div class="form-box">
-            <form action="Register.php" method="POST" name="Formfill">
-                <h2>Register</h2>
-                <p id="result"></p>
-                <div class="input-box">
-                    <i class='bx bxs-user'></i>
-                    <input type="text" name="username" placeholder="Voter Id" id="username">
-                </div>
-                <div class="input-box">
-                    <i class='bx bxs-mobile'></i>
-                    <input type="number" name="mobile" placeholder="Enter Mobile" id="mobile">
-                </div>
-                <div class="input-box">
-                    <i class='bx bxs-lock-alt'></i>
-                    <input type="password" name="password" placeholder="Password" id="password">
-                </div>
-                <div class="input-box">
-                    <i class='bx bxs-lock-alt'></i>
-                    <input type="password" name="cpassword" placeholder="Confirm Password" id="cpassword">
-                </div>
-                <div class="button">
-                    <input type="submit"  class="btn" value="Register">
-                </div>
-                <div class="group">
-                    <span><a href="#">Forget-Password</a></span>
-                    <span><a href="../Routes/login.php">Login</a></span>
-                </div>
-            </form>
+    <div class="wrapper">
+    <form action="" method="POST">
+        <h1>Registration</h1>
+        <div class="input-box">
+            <label for="Name">Full Name:</label>
+            <input type="Name" name="name" placeholder="Enter Full Name" required>
         </div>
+        <div class="input-box">
+            <label for="Date">Date Of Birth:</label>
+            <input type="Date" name="Date" placeholder="dd-mm-yy" required>
+        </div>
+        <div class="input-box">
+            <label for="name">Voter Id:</label>
+            <input type="Name" name="voterid" placeholder="Voter id" required>
+        </div>
+        <div class="input-box">
+            <label for="Number">Phone Number:</label>
+            <input type="Number" name="number" placeholder="Enter Number" required>
+        </div>
+        <div class="input-box">
+            <label for="text">Email:</label>
+            <input type="text" name="email" placeholder="Enter Email" required>
+        </div>
+        <div class="input-box">
+            <label for="text">Password</label>
+            <input type="password" name="password" placeholder="Enter password" required>
+        </div>
+        <div class="input-box">
+            <label for="text">Confirm Password:</label>
+            <input type="password" name="cpassword" placeholder="Enter confirm password" required>
+        </div>
+        <div class="input-box">
+            <label for="file">Candidate Photo:</label>
+            <input type="File" name="photo" required>
+        </div>
+            <button type="submit" class="btn">Register</button>
+            <div class="register-link">
+                <p>have an account ?
+                <a href="log in.php">Login</a>
+                </p>
+            </div>
+            </form>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
 </body>
 </html>
