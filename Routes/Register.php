@@ -1,6 +1,7 @@
 <?php
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $showAlert= false;
+    $showError = false;
     include '../Routes/_dbconnect.php';
     $username = $_POST["username"];
     $mobile = $_POST["mobile"];
@@ -15,6 +16,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         if($result){
             $showAlert = true;
         }
+    }
+    else{
+        $showError = "Password do not match";
     }
 }
 
@@ -40,15 +44,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <a href="../Routes/login.php">Login</a>
         </nav>
     </header>
-    <?php
-    if($showAlert){ 
-    echo'
+<?php 
+if($showAlert){
+    echo '
     <div class="alert alert-success alert-dismissible fade show" role="alert">
         <strong>Success!</strong> You now create an account and now login....
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>';
-    }
-    ?>
+}   
+
+if($showError){
+    echo '
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Error!</strong> '. $showError.'
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>';
+}   
+?>
     <div class="container">
         <div class="form-box">
             <form action="Register.php" method="POST" name="Formfill">
