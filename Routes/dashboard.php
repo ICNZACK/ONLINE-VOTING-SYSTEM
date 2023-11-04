@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if(!$isset($_SESSION['userdata'])){
+        header("location: login.html");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +13,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button>Back</button>
+     <button>Back</button> 
     <button>Logout</button>
-    <h1>Online Voting system</h1>
+    <center><h1>Online Voting system</h1></center>
     <hr>
     <div class="profile"></div>
     <div class="group"></div>

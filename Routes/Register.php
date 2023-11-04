@@ -18,7 +18,7 @@
             echo '
             <script>
             alert("Registration successful!!");
-            window.location = "login.php";
+            window.location = "login.html";
             </script>
             ';
         }
