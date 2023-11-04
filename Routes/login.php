@@ -1,26 +1,4 @@
-<?php
-/*if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $login= false;
-    $showError = false;
-    include '../Routes/_dbconnect.php';
-    $username = $_POST["username"];
-    $password = $_POST["password"];
 
-
-        $sql= "Select * from voters where Voter_id= '$username' AND password= '$password'";
-        $result = mysqli_query($conn, $sql);
-        $num = mysqli_num_rows($result);
-        if($num == 1){
-            $login = true;
-            session_start();
-        }
-    }
-    else{
-        $showError = "invalid username and password ";
-    }
-
-*/
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
