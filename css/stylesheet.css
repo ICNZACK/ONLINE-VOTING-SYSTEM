@@ -85,7 +85,7 @@ body{
 
 .form-box h2{
     font-size: 2em;
-    color: #faf7f7;
+    color: #131212;
     text-align: center;
 }
 
@@ -103,7 +103,7 @@ body{
     left: 5px;
     transform: translateY(-50%);
     font-size: 1em;
-    color: #fcfafa;
+    color: #0c0c0c;
     font-weight: 500;
     pointer-events: none;
     transition: .5s;
@@ -121,14 +121,14 @@ body{
     border: none;        
     outline: none;
     font-size: 1em;
-    color: #faf9f9;
+    color: #0a0a0a;
     font-weight: 600;
     padding: 0 35px 0 5px;
 }
 .input-box select{
     width: 65px;
     height: 65px;
-    color: #faf9f9;
+    color: #050505;
     background: transparent;
     border: none;        
     outline: none;
@@ -137,13 +137,13 @@ body{
     position: absolute;
     right: 8px;
     font-size: 1.2em;
-    color: #fffefe;
+    color: #0a0a0a;
     line-height: 57px;
 }
 
 .remember-forgot{
     font-size: .9em;
-    color: #fff9f9;
+    color: #111010;
     font-weight: 500;
     margin: -15px 0 15px;
     display: flex;
@@ -151,12 +151,12 @@ body{
 }
 
 .remember-forgot label input{
-    accent-color: rgb(252, 250, 250);
+    accent-color: rgb(10, 10, 10);
     margin-right: 3px;
 }
 
 .remember-forgot a{
-    color: rgb(247, 246, 246);
+    color: rgb(12, 12, 12);
     text-decoration: none;
 }
 .remember-forgot a:hover{
@@ -166,25 +166,25 @@ body{
 .btn{
     width: 100%;
     height: 45px;
-    background: black;
+    background: rgb(0, 0, 0);
     outline: none;
     border-radius: 6px;
     cursor: pointer;
     font-size: 1em;
-    color: white;
+    color: rgb(243, 240, 240);
     font-weight: 500;
 }
 
 .login-register{
     font-size: .9em;
-    color: rgb(250, 248, 248);
+    color: rgb(12, 12, 12);
     text-align: center;
     font-weight: 500;
     margin: 25px 0 10px;
 }
 
 .login-register p a{
-    color: rgb(250, 242, 242);
+    color: rgb(10, 10, 10);
     text-decoration: none;
     font-weight: 600;
 }
