@@ -114,6 +114,8 @@ body {
 }
 
 footer{
+    background-color: transparent;
     color: #0a0a0a;
     text-align: center;
+    padding: 10px;
 }
