@@ -44,10 +44,6 @@
         </nav>
     </header>
 
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Success!</strong> You now logged in...
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>;
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

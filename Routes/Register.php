@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="stylesheet2.css">
 </head>
 <body>
-    
+
     <header class="header">
         <a href="#" class="logo">
             <ion-icon name="logo-ionic"></ion-icon>WeVote
@@ -57,7 +57,7 @@
             <button type="submit" class="btn">Register</button>
             <div class="register-link">
                 <p>have an account ?
-                <a href="log in.php">Login</a>
+                <a href="login.php">Login</a>
                 </p>
             </div>
             </form>
