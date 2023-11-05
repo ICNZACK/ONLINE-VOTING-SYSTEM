@@ -13,8 +13,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <button>Back</button> 
-    <button>Logout</button>
+    <style>
+        #backbtn{
+            padding: 5px;
+            font-size: 15px;
+            background-color: blue;
+            color: aliceblue;
+            border-radius: 5px;
+            float: left;
+        }
+
+        #logoutbtn{
+            padding: 5px;
+            font-size: 15px;
+            background-color: blue;
+            color: aliceblue;
+            border-radius: 5px;
+            float: right;
+        }        
+    </style>
+
+     <button id="backbtn">Back</button> 
+    <button id="logoutbtn">Logout</button>
     <center><h1>Online Voting system</h1></center>
     <hr>
     <div class="profile"></div>
