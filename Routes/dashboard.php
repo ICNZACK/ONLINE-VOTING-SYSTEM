@@ -81,6 +81,14 @@
         padding: 10px;
     }
 
+    #voted{
+        padding: 5px;
+        font-size: 15px;
+        background-color: green;
+        color: aliceblue;
+        border-radius: 5px;
+    }
+
 
     </style> 
     
@@ -118,6 +126,11 @@
                                 if($_SESSION['userdata']['status']==0){
                                     ?>
                                     <input type="submit" name="votebtn" value="vote" id="votebtn">
+                                    <?php
+                                }
+                                else{
+                                    ?>
+                                    <button disabled type="button" name="votebtn" value="Vote" id="voted"></button>
                                     <?php
                                 }
                             ?>
