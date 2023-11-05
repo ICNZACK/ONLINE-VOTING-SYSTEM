@@ -114,6 +114,13 @@
                         <form action="vote.php" method="POST">
                             <input type="hidden" name="gvotes" value=<?php echo $groupsdata[$i]['votes']?>>
                             <input type="hidden" name="gid" value=<?php echo $groupsdata[$i]['S.no']?>>
+                            <?php
+                                if($_SESSION['userdata']['status']==0){
+                                    ?>
+                                    <input type="submit" name="votebtn" value="vote" id="votebtn">
+                                    <?php
+                                }
+                            ?>
                             <input type="submit" name="votebtn" value="vote" id="votebtn">
                         </form>
                     </div>
