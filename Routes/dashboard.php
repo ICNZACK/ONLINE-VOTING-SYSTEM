@@ -7,7 +7,7 @@
     $userdata = $_SESSION['userdata'];
     $groupsdata = $_SESSION['groupsdata'];
 
-    if($userdata['status']==0){
+    if($_SESSION['userdata']['status']==0){
         $status= '<b style="color:red">Not voted</b>';
     }
     else{
@@ -88,8 +88,8 @@
     <div id="mainSection">
         <center>
     <div id="headerSection">
-        <button id="backbtn">Back</button> 
-        <button id="logoutbtn">Logout</button>
+        <a href="login.html"><button id="backbtn">Back</button></a>
+        <a href="logout.php"><button id="logoutbtn">Logout</button></a>
         <h1>Online Voting system</h1>
     </div>
 </center>
