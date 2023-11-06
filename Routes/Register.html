@@ -22,42 +22,42 @@
     <div class="wrapper">
     <form action="Register.php" method="POST" enctype="multipart/form-data">
         <h1>Registration</h1>
-        <div class="input-box">
+        
+            <div class="input-box">
+            <label for="role">User Identification:</label>
+                <select name="role">
+                    <option value="1">Voter</option>
+                    <option value="2">Candidate</option>
+                </select>
+            </div>
+            <div class="input-box">
             <label for="name">Name:</label>
-            <input type="Name" name="name" placeholder="Name" required>
+            <input type="Name" name="name" placeholder="" required>
         </div>
         <div class="input-box">
             <label for="name">Voter Id:</label>
-            <input type="Name" name="voterid" placeholder="Voter id" required>
+            <input type="Name" name="voterid" placeholder="" required>
         </div>
         <div class="input-box">
             <label for="Number">Phone Number:</label>
-            <input type="Number" name="number" placeholder="Enter Number" required>
+            <input type="Number" name="number" placeholder="" required>
         </div>
         <div class="input-box">
             <label for="text">Email:</label>
-            <input type="email" name="email" placeholder="Enter Email" required>
+            <input type="email" name="email" placeholder="" required>
         </div>
         <div class="input-box">
             <label for="text">Password</label>
-            <input type="password" name="password" placeholder="Enter password" required>
+            <input type="password" name="password" placeholder="" required>
         </div>
         <div class="input-box">
             <label for="text">Confirm Password:</label>
-            <input type="password" name="cpassword" placeholder="Enter confirm password" required>
+            <input type="password" name="cpassword" placeholder="" required>
         </div>
         <div class="input-box">
-            <label for="file">Candidate Photo:</label>
+            <label for="file">Voter/Candidate Photo:</label>
             <input type="File" name="photo" required>
         </div>
-        <br>
-        <div class="input-box">
-            <label for="role">Select your role:</label>
-                    <select name="role">
-                        <option value="1">Voter</option>
-                        <option value="2">Candidate</option>
-                    </select>
-                </div>
             <button type="submit" class="btn">Register</button>
             <div class="register-link">
                 <p>have an account ?
