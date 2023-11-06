@@ -133,7 +133,7 @@
                                     <button disabled type="button" name="votebtn" value="Vote" id="voted"></button>
                                     <?php
                                 }
-                            ?>
+                            ?>  
                         </form>
                     </div>
                     <hr>
