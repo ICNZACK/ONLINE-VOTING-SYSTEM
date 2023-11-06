@@ -108,7 +108,7 @@
         <b>Name:</b><?php echo $userdata['Name']?><br><br>
         <b>Email:</b><?php echo $userdata['Email']?><br><Br>
         <b>Mobile:</b><?php echo $userdata['number']?><br><br>
-        <b>Status:</b><?php echo $status?>
+        <b>Status:</b><?php echo $status?><br><br>
     </div>
     <div id="group">
         <?php
@@ -120,12 +120,12 @@
                         <b>Group Name:</b><?php echo $groupsdata[$i]['Name']?><br><br>
                         <b>Votes:</b><?php echo $groupsdata[$i]['votes']?> <br><br>
                         <form action="vote.php" method="POST">
-                            <input type="hidden" name="gvotes" value=<?php echo $groupsdata[$i]['votes']?>>
-                            <input type="hidden" name="gid" value=<?php echo $groupsdata[$i]['S.no']?>>
+                            <input type="hidden" name="gvotes" value="<?php echo $groupsdata[$i]['votes']?>">
+                            <input type="hidden" name="gid" value="<?php echo $groupsdata[$i]['S.no']?>">
                             <?php
                                 if($_SESSION['userdata']['status']==0){
                                     ?>
-                                    <input type="submit" name="votebtn" value="vote" id="votebtn">
+                                    <input type="submit" name="votebtn" value="Vote" id="votebtn">
                                     <?php
                                 }
                                 else{
