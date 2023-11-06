@@ -134,7 +134,6 @@
                                     <?php
                                 }
                             ?>
-                            <input type="submit" name="votebtn" value="vote" id="votebtn">
                         </form>
                     </div>
                     <hr>
