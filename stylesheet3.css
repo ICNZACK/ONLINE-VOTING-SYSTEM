@@ -28,7 +28,7 @@
 
 .nav a {
     position: relative;
-    font-size: 1.6em;
+    font-size: 1.3em;
     color: #fff;
     text-decoration: none;
     font-family: 'Unna', serif;
@@ -61,12 +61,17 @@
     background-position:center;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 80px 100px 0;
 }
 .Home .content {
     color: #0e0d0d;
     text-align:center;
     background-position: center;
+}
+
+.content {
+    max-width: 752px;
 }
 
 .content h2 {
@@ -90,11 +95,11 @@
     background:black;
 }
 body {
-    display: flex;
+    display: relative;
     justify-content: center;
     align-items: center;
     min-height: 100%;
-    background: url("") no-repeat;
+    background: url("./css/new.jpg") no-repeat;
     background-size: 1100px;
     background-position: center;
 
