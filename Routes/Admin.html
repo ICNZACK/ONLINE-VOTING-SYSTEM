@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatibl" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Voting System-Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unna:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/stylesheet.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -13,12 +16,10 @@
 <body>
     <header class="header">
         <a href="#" class="logo">
-            <ion-icon name="logo-ionic"></ion-icon>WeVote
+            <ion-icon name="logo-ionic"></ion-icon>WEVOTE
         </a>
         <nav class="nav">
-            <a href="../index.html">Home</a>
-            <a href="../Routes/About Us.html">About Us</a>
-            <a href="../Routes/login.html">Login</a>
+            <a href="../index.html">HOME</a>
         </nav>
     </header>
 
@@ -31,30 +32,19 @@
             <form action="../Routes/login.php" method= "POST">
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
-                    <input type="text" name = "voterid" required>
-                    <label>Voter Id</label>
+                    <input type="text" name = "Adminid" required>
+                    <label>Admin Id</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
                     <input type="password" name= "password" required>
                     <label>Password</label>
                 </div>
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="settings"></ion-icon></span>
-                    <select name="role">
-                        <option value="1">Voter</option>
-                        <option value="2">Candidate</option>
-                    </select>
-                </div>
                 <div class="remember-forgot">
                     <label ><input type="checkbox">Remember me</label>
                     <a href="#">Forgot Password?</a>
                 </div>
                 <button type="submit" class="btn">Login</button>
-                <div class="login-register">
-                    <p>Don't have an account?
-                        <a href="../Routes/Register.html" class="register-link">Register</a>
-                    </p>
                 </div>
             </form>
         </div>
