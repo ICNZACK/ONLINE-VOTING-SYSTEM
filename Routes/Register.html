@@ -3,41 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Voting System - Registration</title>
-    <link rel="stylesheet" href="../css/stylesheet2.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unna:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet2.css">
 </head>
 <body>
-    <div class="container">
-        <div class="form-box">
-            <form action="" name="Formfill">
-                <h2>Register</h2>
-                <p id="result"></p>
-                <div class="input-box">
-                    <i class='bx bxs-user'></i>
-                    <input type="text" name="Username" placeholder="Username">
-                </div>
-                <div class="input-box">
-                    <i class='bx bxs-mobile'></i>
-                    <input type="number" name="Mobile" placeholder="Enter Mobile">
-                </div>
-                <div class="input-box">
-                    <i class='bx bxs-lock-alt'></i>
-                    <input type="password" name="Password" placeholder="Password">
-                </div>
-                <div class="input-box">
-                    <i class='bx bxs-lock-alt'></i>
-                    <input type="password" name="cPassword" placeholder="Confirm Password">
-                </div>
-                <div class="button">
-                    <input type="submit"  class="btn" value="Register">
-                </div>
-                <div class="group">
-                    <span><a href="#">Forget-Password</a></span>
-                    <span><a href="../Routes/index.html">Login</a></span>
-                </div>
-            </form>
+
+    <header class="header">
+        <a href="#" class="logo">
+            <ion-icon name="logo-ionic"></ion-icon>WEVOTE
+        </a>
+    </header>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <div class="wrapper">
+    <form action="Register.php" method="POST" enctype="multipart/form-data">
+        <h1>Registration</h1>
+        
+            <div class="input-box">
+            <label for="role">User Identification:</label>
+                <select name="role">
+                    <option value="1">Voter</option>
+                    <option value="2">Candidate</option>
+                </select>
+            </div>
+            <div class="input-box">
+            <label for="name">Name:</label>
+            <input type="Name" name="name" placeholder="" required>
         </div>
+        <div class="input-box">
+            <label for="name">Voter Id:</label>
+            <input type="Name" name="voterid" placeholder="" required>
+        </div>
+        <div class="input-box">
+            <label for="Number">Phone Number:</label>
+            <input type="Number" name="number" placeholder="" required>
+        </div>
+        <div class="input-box">
+            <label for="text">Email:</label>
+            <input type="email" name="email" placeholder="" required>
+        </div>
+        <div class="input-box">
+            <label for="text">Password</label>
+            <input type="password" name="password" placeholder="" required>
+        </div>
+        <div class="input-box">
+            <label for="text">Confirm Password:</label>
+            <input type="password" name="cpassword" placeholder="" required>
+        </div>
+        <div class="input-box">
+            <label for="file">Voter/Candidate Photo:</label>
+            <input type="File" name="photo" required>
+        </div>
+            <button type="submit" class="btn">Register</button>
+            <div class="register-link">
+                <p>have an account ?
+                <a href="login.html">Login</a>
+                </p>
+            </div>
+            </form>
     </div>
+
 </body>
 </html>
