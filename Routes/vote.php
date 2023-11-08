@@ -8,7 +8,7 @@
     $uid=$_SESSION['userdata']['S.no'];
 
     $update_votes= mysqli_query($connect, "UPDATE `voters` SET votes= '$total_votes' WHERE S.no='$gid'");
-   $update_user_status= mysqli_query($connect, "UPDATE `voters` SET status=1 WHERE S.no='$uid'");
+    $update_user_status= mysqli_query($connect, "UPDATE `voters` SET status=1 WHERE S.no='$uid'");
     
     /* echo $update_user_status;
  */
