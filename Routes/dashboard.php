@@ -125,12 +125,12 @@
                             <?php
                                 if($_SESSION['userdata']['status']==0){
                                     ?>
-                                    <input type="submit" name="votebtn" value="Vote" id="votebtn">
+                                    <button type="submit" name="votebtn" value="Vote" id="votebtn">Vote</button>
                                     <?php
                                 }
                                 else{
                                     ?>
-                                    <button disabled type="button" name="votebtn" value="Vote" id="voted"></button>
+                                    <button disabled type="button" name="votebtn" value="Vote" id="voted">Voted</button>
                                     <?php
                                 }
                             ?>  
