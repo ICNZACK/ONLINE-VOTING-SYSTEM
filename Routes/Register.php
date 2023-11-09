@@ -11,9 +11,10 @@
     $tmp_name = $_FILES['photo']['tmp_name'];
     $role = $_POST['role'];
 
-    if($password==$cpassword){
+ if($password==$cpassword and $role==1){
         move_uploaded_file($tmp_name, "../uplords/$image");
-        $insert = mysqli_query($connect, "INSERT INTO voters (Name, Voter_id, number, Email, password, photo, role, votes, status) VALUES ('$name', '$voterid', '$number', '$email', '$password', '$image', '$role', 0, 0)");
+        $insert = mysqli_query($connect, "INSERT INTO voters (Name, Voter_id, number, Email, password, photo, role, status) VALUES ('$name', '$voterid', '$number', '$email', '$password', '$image', '$role', 0)");
+
         if($insert){
             echo '
             <script>
@@ -31,12 +32,34 @@
             ';
         }
     }
+   elseif($password==$cpassword and $role==2){
+        move_uploaded_file($tmp_name, "../uplords/$image");
+        $insert2 = mysqli_query($connect, "INSERT INTO cadidate (Name, Voter_id, number, Email, password, photo, role, votes) VALUES ('$name', '$voterid', '$number', '$email', '$password', '$image', '$role', 0)");
+
+        if($insert2){
+            echo '
+            <script>
+            alert("Registration successful!!");
+            window.location = "login.html";
+            </script>
+            ';
+        }
+        else{
+            echo '
+            <script>
+            alert("Some error occured...");
+            window.location = "Register.html";
+            </script>
+            ';
+        }
+    } 
     else{
         echo '
         <script>
-        alert("Password and confirm password does not match..");
+        alert("Password does not match or User is already exist...");
         window.location = "Register.html";
         </script>
         ';
     }
+
 ?>

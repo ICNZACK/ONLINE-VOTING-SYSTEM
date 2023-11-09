@@ -7,15 +7,15 @@
     $gid=$_POST['gid'];
     $uid=$_SESSION['userdata']['S.no'];
 
-    $update_votes= mysqli_query($connect, "UPDATE `voters` SET votes= '$total_votes' WHERE S.no='$gid'");
+    $update_votes= mysqli_query($connect, "UPDATE `cadidate` SET votes= '$total_votes' WHERE S.no='$gid'");
     $update_user_status= mysqli_query($connect, "UPDATE `voters` SET status=1 WHERE S.no='$uid'");
     
     /* echo $update_user_status;
  */
     if($update_user_status==0){
-        $increment = mysqli_query($connect, "UPDATE voters SET votes= '$update_votes+1' WHERE S.no='$gid'");
+        $increment = mysqli_query($connect, "UPDATE cadidate SET votes= '$update_votes+1' WHERE S.no='$gid'");
         $update_user_status= mysqli_query($connect, "UPDATE voters SET status= '1' WHERE S.no='$uid'");
-        $groups= mysqli_query($connect, "SELECT * FROM voters WHERE role= 2");
+        $groups= mysqli_query($connect, "SELECT * FROM cadidate WHERE role= 2");
         $groupsdata = mysqli_fetch_all($groups, MYSQLI_ASSOC);
         $_SESSION['userdata']['status']=1;
         $_SESSION['groupsdata']= $groupsdata;
