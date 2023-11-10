@@ -6,7 +6,7 @@
     //$total_votes = $votes + 1;
     $total_votes_query= mysqli_query($connect, "SELECT votes from cadidate ");
     $total_votes_row = mysqli_fetch_assoc($total_votes_query);
-    $total_votes = (int)$total_votes_row['votes'] + 1;
+    $total_votes = (int)$total_votes_row['votes+1'];
     //$gid = $_POST['S.no'];
     $sno=$_POST['sno'];
     $uid = $_SESSION['userdata']['S.no'];

@@ -120,7 +120,7 @@
                         <img style= "float: right" src="../uplords/<?php echo $groupsdata[$i]['photo']?>" height="100" width="100">
                         <b>Group Name:</b><?php echo $groupsdata[$i]['Name']?><br><br>
                         <b>Votes:</b><?php echo $groupsdata[$i]['votes']?> <br><br>
-                        <b>S.no:</b><?php echo $groupsdata[$i]['S.no']?> <br><br>
+                        <!-- <b>S.no:</b><?php //echo $groupsdata[$i]['S.no']?> <br><br> -->
                         <form action="vote.php" method="POST">
                             <input type="hidden" name="gvotes" value="<?php echo $groupsdata[$i]['votes']?>">
                             <!-- <input type="hidden" name="gid" value=""> -->
