@@ -21,7 +21,7 @@
 
 .header .logo {
     font-size: 1.7em;
-    color: #0c0c0c;
+    color: #fff;
     text-decoration: none;
     font-family: 'Unna', serif;
 }
@@ -29,7 +29,7 @@
 .nav a {
     position: relative;
     font-size: 1.3em;
-    color: #070707;
+    color: #fff;
     text-decoration: none;
     font-family: 'Unna', serif;
     margin-left: 40px;
