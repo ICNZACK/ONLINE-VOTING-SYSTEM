@@ -1,18 +1,71 @@
 <?php
-    session_start();
-    if(!isset($_SESSION['userdata'])){
-        header("location: login.html");
-    }
-
-    $userdata = $_SESSION['userdata'];
-    $groupsdata = $_SESSION['groupsdata'];
-
-    if($_SESSION['userdata']['status']==0){
-        $status= '<b style="color:red">Not voted</b>';
-    }
-    else{
-        $status= '<b style="color:green">voted</b>';
-    }
+/*        session_start();
+       if(!isset($_SESSION['userdata'])){
+           header("location: login.html");
+       }
+   
+       $userdata = $_SESSION['userdata'];
+       $groupsdata = $_SESSION['groupsdata'];
+   
+       if($_SESSION['userdata']['status']==0){
+           $status= '<b style="color:red">Not voted</b>';
+       }
+       else{
+           $status= '<b style="color:green">voted</b>';
+       }  */
+   
+   // Define a SessionManager class to handle session operations
+   class SessionManager {
+       public function startSession() {
+           session_start();
+       }
+   
+       public function checkUserSession() {
+           if (!isset($_SESSION['userdata'])) {
+               header("location: login.html");
+           }
+       }
+   
+       public function getUserData() {
+           return $_SESSION['userdata'];
+       }
+   
+       public function getGroupsData() {
+           return $_SESSION['groupsdata'];
+       }
+   }
+   
+   // Define a User class to represent user data
+   class User {
+       private $userData;
+   
+       public function __construct($userData) {
+           $this->userData = $userData;
+       }
+   
+       public function getStatus() {
+           return ($this->userData['status'] == 0) ? '<b style="color:red">Not voted</b>' : '<b style="color:green">voted</b>';
+       }
+   }
+   
+   // Instantiate the SessionManager class
+   $sessionManager = new SessionManager();
+   
+   // Start the session
+   $sessionManager->startSession();
+   
+   // Check if the user is logged in
+   $sessionManager->checkUserSession();
+   
+   // Retrieve user and groups data
+   $userData = $sessionManager->getUserData();
+   $groupsData = $sessionManager->getGroupsData();
+   
+   // Instantiate the User class
+   $user = new User($userData);
+   
+   // Get the user's status
+   $status = $user->getStatus(); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -104,25 +157,25 @@
     <hr>
     <div id="mainpannel">
     <div id="profile">
-        <center><img src="../uplords/<?php echo $userdata['photo']?>" height="150" width= "150"><br><br></center>
-        <b>Name:</b><?php echo $userdata['Name']?><br><br>
-        <b>Email:</b><?php echo $userdata['Email']?><br><Br>
-        <b>Mobile:</b><?php echo $userdata['number']?><br><br>
+        <center><img src="../uplords/<?php echo $userData['photo']?>" height="150" width= "150"><br><br></center>
+        <b>Name:</b><?php echo $userData['Name']?><br><br>
+        <b>Email:</b><?php echo $userData['Email']?><br><Br>
+        <b>Mobile:</b><?php echo $userData['number']?><br><br>
         <b>Status:</b><?php echo $status?><br><br>
     </div>
     <div id="group">
         <?php
             if($_SESSION['groupsdata']){
-                for($i=0; $i<count($groupsdata); $i++){
-                    $var1= $groupsdata[$i]['S.no'];
+                for($i=0; $i<count($groupsData); $i++){
+                    $var1= $groupsData[$i]['S.no'];
                     ?>
                     <div>
-                        <img style= "float: right" src="../uplords/<?php echo $groupsdata[$i]['photo']?>" height="100" width="100">
-                        <b>Group Name:</b><?php echo $groupsdata[$i]['Name']?><br><br>
-                        <b>Votes:</b><?php echo $groupsdata[$i]['votes']?> <br><br>
+                        <img style= "float: right" src="../uplords/<?php echo $groupsData[$i]['photo']?>" height="100" width="100">
+                        <b>Group Name:</b><?php echo $groupsData[$i]['Name']?><br><br>
+                        <b>Votes:</b><?php echo $groupsData[$i]['votes']?> <br><br>
                         <!-- <b>S.no:</b><?php //echo $groupsdata[$i]['S.no']?> <br><br> -->
                         <form action="vote.php" method="POST">
-                            <input type="hidden" name="gvotes" value="<?php echo $groupsdata[$i]['votes']?>">
+                            <input type="hidden" name="gvotes" value="<?php echo $groupsData[$i]['votes']?>">
                             <!-- <input type="hidden" name="gid" value=""> -->
                             <input type="hidden" name='sno' value=$var1>
                             <?php
