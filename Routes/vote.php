@@ -1,12 +1,12 @@
 <?php
-/*     session_start();
+   session_start();
     include('_dbconnect.php');
 
     $votes = $_POST['gvotes'];
-    //$total_votes = $votes + 1;
-    $total_votes_query= mysqli_query($connect, "SELECT votes from cadidate ");
+    $total_votes = $votes + 1;
+    /* $total_votes_query= mysqli_query($connect, "SELECT votes from cadidate ");
     $total_votes_row = mysqli_fetch_assoc($total_votes_query);
-    $total_votes = (int)$total_votes_row['votes+1'];
+    $total_votes = $total_votes_row['votes+1']; */
     //$gid = $_POST['S.no'];
     $sno=$_POST['sno'];
     $uid = $_SESSION['userdata']['S.no'];
@@ -56,10 +56,10 @@
             window.location = "dashboard.php";
             </script>
    ';
-} */
+} 
 
 
-session_start();
+/* session_start();
 
 class Database {
     private $connection;
@@ -151,5 +151,114 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sno = $_POST['sno'];
     $votingApp = new VotingApp();
     $votingApp->vote($sno);
+} */
+
+/* // Create a database connection class
+class Database {
+    private $connect;
+
+    public function __construct() {
+        include('_dbconnect.php');
+        $this->connect = $connect;
+    }
+
+    public function getConnection() {
+        return $this->connect;
+    }
 }
+
+// Create a Candidate class
+class Candidate {
+    private $db;
+
+    public function __construct($database) {
+        $this->db = $database;
+    }
+
+    public function updateVotes($sno, $votes) {
+        $connect = $this->db->getConnection();
+        $totalVotesQuery = mysqli_query($connect, "SELECT votes FROM cadidate");
+        $totalVotesRow = mysqli_fetch_assoc($totalVotesQuery);
+        $totalVotes = (int)$totalVotesRow['votes'] + 1;
+
+        $updateVotesQuery = "UPDATE cadidate SET votes = '$totalVotes' WHERE S.no = '$sno'";
+        $updateVotes = mysqli_query($connect, $updateVotesQuery);
+
+        return $updateVotes;
+    }
+}
+
+// Create a User class
+class User {
+    private $db;
+
+    public function __construct($database) {
+        $this->db = $database;
+    }
+
+    public function updateStatus($uid) {
+        $connect = $this->db->getConnection();
+        $updateUserStatusQuery = "UPDATE voters SET status = 1 WHERE S.no = '$uid'";
+        $updateUserStatus = mysqli_query($connect, $updateUserStatusQuery);
+
+        return $updateUserStatus;
+    }
+}
+
+// Main code
+session_start();
+
+$database = new Database();
+$candidate = new Candidate($database);
+$user = new User($database);
+
+$votes = $_POST['gvotes'];
+$sno = $_POST['sno'];
+$uid = $_SESSION['userdata']['S.no'];
+
+$updateVotesResult = $candidate->updateVotes($sno, $votes);
+
+if ($updateVotesResult) {
+    $updateUserStatusResult = $user->updateStatus($uid);
+
+    if ($updateUserStatusResult == 0) {
+        $groupsQuery = "SELECT * FROM voters WHERE role = 2";
+        $groups = mysqli_query($database->getConnection(), $groupsQuery);
+
+        if ($groups) {
+            $groupsdata = mysqli_fetch_all($groups, MYSQLI_ASSOC);
+            $_SESSION['userdata']['status'] = 1;
+            $_SESSION['groupsdata'] = $groupsdata;
+
+            echo '
+                <script>
+                alert("Voting successful....");
+                window.location = "dashboard.php";
+                </script>
+            ';
+        } else {
+            echo '
+                <script>
+                alert("Error fetching data from voters table");
+                window location = "dashboard.php";
+                </script>
+            ';
+        }
+    } else {
+        echo '
+            <script>
+            alert("Error updating user status");
+            window.location = "dashboard.php";
+            </script>
+        ';
+    }
+} else {
+    echo '
+        <script>
+        alert("Error updating votes");
+        window.location = "dashboard.php";
+        </script>
+   ';
+}
+ */
 ?>
