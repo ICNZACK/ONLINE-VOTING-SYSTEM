@@ -36,3 +36,11 @@
 .nav a:hover::after {
     transform: scaleX(1);
 }
+body{
+    display: relative;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    background-size: cover;
+    background-position: center;
+}
