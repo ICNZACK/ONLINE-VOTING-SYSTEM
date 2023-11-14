@@ -21,6 +21,13 @@
     color: #fff;
     text-decoration: none;
 }
+.nav a {
+    position: relative;
+    font-size: 1.3em;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 40px;
+}
 .nav a::after {
     content: '';
     position: absolute;
