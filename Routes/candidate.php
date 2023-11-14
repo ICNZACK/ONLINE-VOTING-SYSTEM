@@ -1,7 +1,7 @@
 <?php
     include "_dbconnect.php";
 
-    $sql="SELECT * FROM `voters` ";
+    $sql="SELECT * FROM `cadidate` ";
     $result=mysqli_query($connect, $sql);
 ?>
 <!DOCTYPE html>

@@ -4,11 +4,11 @@
 
     $votes = $_POST['gvotes'];
     $total_votes = $votes + 1;
-    $sno=$_POST['sno'];
-    $uid = $_SESSION['userdata']['S.no'];
+    $sno=$_POST['Sno'];
+    $uid = $_SESSION['userdata']['Sno'];
 
-    $update_votes = mysqli_query($connect, "UPDATE cadidate SET votes = '$total_votes' WHERE S.no = '$sno'");
-    $update_user_status = mysqli_query($connect, "UPDATE voters SET status = 1 WHERE S.no = '$uid'");
+    $update_votes = mysqli_query($connect, "UPDATE cadidate SET votes = '$total_votes' WHERE Sno = '$sno'");
+    $update_user_status = mysqli_query($connect, "UPDATE voters SET status = 1 WHERE Sno = '$uid'");
 
     if ($update_user_status ==0) {
         $groups= mysqli_query($connect, "SELECT * from cadidate where role=2");
@@ -48,7 +48,7 @@
                 {
                     $connect = $this->db->getConnection();
                     $total_votes = $votes + 1;
-                    $update_votes = mysqli_query($connect, "UPDATE candidate SET votes = '$total_votes' WHERE S.no = '$sno'");
+                    $update_votes = mysqli_query($connect, "UPDATE candidate SET votes = '$total_votes' WHERE Sno = '$sno'");
                     return $update_votes;
                 }
             }
@@ -65,7 +65,7 @@
                 public function updateStatus($uid)
                 {
                     $connect = $this->db->getConnection();
-                    $update_user_status = mysqli_query($connect, "UPDATE voters SET status = 1 WHERE S.no = '$uid'");
+                    $update_user_status = mysqli_query($connect, "UPDATE voters SET status = 1 WHERE Sno = '$uid'");
                     return $update_user_status;
                 }
             
@@ -101,7 +101,7 @@
             
             $votes = $_POST['gvotes'];
             $sno = $_POST['sno'];
-            $uid = $_SESSION['userdata']['S.no'];
+            $uid = $_SESSION['userdata']['Sno'];
             
             $updateVotesResult = $candidate->updateVotes($sno, $votes);
             

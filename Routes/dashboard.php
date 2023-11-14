@@ -167,7 +167,7 @@
         <?php
             if($_SESSION['groupsdata']){
                 for($i=0; $i<count($groupsData); $i++){
-                    $var1= $groupsData[$i]['S.no'];
+                    $var1= $groupsData[$i]['Sno'];
                     ?>
                     <div>
                         <img style= "float: right" src="../uplords/<?php echo $groupsData[$i]['photo']?>" height="100" width="100">
