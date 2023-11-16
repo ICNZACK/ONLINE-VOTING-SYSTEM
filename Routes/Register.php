@@ -118,7 +118,7 @@
         } else {
             echo '
             <script>
-            alert("Some error occurred...");
+            alert("Password not matched or Username is Already exist...");
             window.location = "Register.html";
             </script>
             ';
