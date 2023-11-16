@@ -44,7 +44,7 @@
        }
    
        public function getStatus() {
-           return ($this->userData['status'] == 0) ? '<b style="color:red">Not voted</b>' : '<b style="color:green">voted</b>';
+           return ($this->userData['status'] == 0) ? '<b style="color:red">Not voted</b>' : '<b style="color:black">voted</b>';
        }
    }
    
@@ -89,10 +89,10 @@
     <div id="mainpannel">
     <div id="profile">
         <center><img src="../uplords/<?php echo $userData['photo']?>" height="150" width= "150"><br><br></center>
-        <b>Name:</b><?php echo $userData['Name']?><br><br>
-        <b>Email:</b><?php echo $userData['Email']?><br><Br>
-        <b>Mobile:</b><?php echo $userData['number']?><br><br>
-        <b>Status:</b><?php echo $status?><br><br>
+        <b>Name: </b><?php echo $userData['Name']?><br><br>
+        <b>Email: </b><?php echo $userData['Email']?><br><Br>
+        <b>Mobile: </b><?php echo $userData['number']?><br><br>
+        <b>Status: </b><?php echo $status?><br><br>
     </div>
     <div id="group">
         <?php
@@ -101,9 +101,9 @@
                     $var1= $groupsData[$i]['Sno'];
                     ?>
                     <div>
-                        <img style= "float: right" src="../uplords/<?php echo $groupsData[$i]['photo']?>" height="100" width="100">
+                        <img style= "float: right" src="../uplords/<?php echo $groupsData[$i]['photo']?>" height="70" width="70">
                         <b>Group Name:</b><?php echo $groupsData[$i]['Name']?><br><br>
-                        <b>Votes:</b><?php echo $groupsData[$i]['votes']?> <br><br>
+                        
                         <!-- <b>S.no:</b><?php //echo $groupsdata[$i]['S.no']?> <br><br> -->
                         <form action="vote.php" method="POST">
                             <input type="hidden" name="gvotes" value="<?php echo $groupsData[$i]['votes']?>">
@@ -134,5 +134,6 @@
         </div>
     </div>
     </div>
+
 </body>
 </html>
