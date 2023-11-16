@@ -75,86 +75,7 @@
     <link rel="stylesheet" href="../CSS/dashboard.css">
     <title>Document</title>
 </head>
-<body>
-   <!--  <style>
-        body{
-            display: flex;
-           justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            width: 100%;
-            height: 100%;
-            background: url(../css/img/dashboard.png) no-repeat;
-            background-size: 1500px;
-            background-position: center;
-            background-color: blue;
-    
-    }
-
-    #headerSection{
-        padding: 5px;
-    }
-
-    #headerSection h1{
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-
-    #backbtn{
-        padding: 5px;
-        font-size: 15px;
-        background-color: blue;
-        color: aliceblue;
-        border-radius: 5px;
-        float: left;
-        margin : 15px;
-    }
-
-    #logoutbtn{
-        padding: 5px;
-        font-size: 15px;
-        background-color: blue;
-        color: aliceblue;
-        border-radius: 5px;
-        float: right;
-        margin : 15px;
-    }  
-
-    #profile{
-        background-color: white;
-        width: 30%;
-        padding: 20px;
-        float: left;
-    }
-
-    #group{
-        background-color: white;
-        width: 60%;
-        padding: 20px;
-        float: right;
-    }
-    #votebtn{
-        padding: 5px;
-        font-size: 15px;
-        background-color: blue;
-        color: aliceblue;
-        border-radius: 5px;
-    }
-
-    #mainpannel{
-        padding: 10px;
-    }
-
-    #voted{
-        padding: 5px;
-        font-size: 15px;
-        background-color: green;
-        color: aliceblue;
-        border-radius: 5px;
-    }
-
-
-    </style>  -->
-    
+<body>  
 
     <div id="mainSection">
         <center>
@@ -163,7 +84,7 @@
         <a href="logout.php"><button id="logoutbtn">Logout</button></a>
         <h1>Online Voting system</h1>
     </div>
-</center>
+    </center>
     <hr>
     <div id="mainpannel">
     <div id="profile">

@@ -8,7 +8,7 @@ body{
                background: url(../css/img/dashboard.png) no-repeat;
                background-size: 1500px;
                background-position: center; */
-               background: url(../css/img/dashboard.png) no-repeat;
+               background: url(../css/img/dash.png) no-repeat;
                width: 100%;
                height: 100%;
                background-size: 1500px;
@@ -44,7 +44,10 @@ body{
        }  
    
        #profile{
-           background-color: white;
+            background: transparent;
+            border: 2px solid rgb(131, 107, 107);
+            backdrop-filter: blur(25px);
+            box-shadow: 0 0 10px black;
            width: 30%;
            padding: 20px;
            float: left;
@@ -52,7 +55,11 @@ body{
        }
    
        #group{
-           background-color: white;
+          /* background-color: white;*/
+           background: transparent;
+           border: 2px solid rgb(131, 107, 107);
+           backdrop-filter: blur(25px);
+           box-shadow: 0 0 10px black;
            width: 60%;
            padding: 20px;
            float: right;
