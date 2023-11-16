@@ -75,9 +75,18 @@
     <title>Document</title>
 </head>
 <body>
-    <style>
+   <!--  <style>
         body{
-        background-color: aqua;
+            display: flex;
+           justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+            height: 100%;
+            background: url(../css/img/dashboard.png) no-repeat;
+            background-size: 1500px;
+            background-position: center;
+            background-color: blue;
     
     }
 
@@ -143,7 +152,7 @@
     }
 
 
-    </style> 
+    </style>  -->
     
 
     <div id="mainSection">
