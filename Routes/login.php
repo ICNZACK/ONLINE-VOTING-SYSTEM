@@ -77,6 +77,7 @@
      if ($userAuthentication->authenticateUser($voterid, $password, $role)) {
          echo '
          <script>
+         alert("Login Successful....");
          window.location = "dashboard.php";
          </script>
          ';
