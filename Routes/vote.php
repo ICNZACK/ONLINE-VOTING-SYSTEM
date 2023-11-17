@@ -3,7 +3,7 @@
     include('_dbconnect.php');
 
     $votes = $_POST['gvotes'];
-    $total_votes = $votes + 1;
+    //$total_votes = $votes + 1;
     $sno=$_POST['sno'];
     $uid = $_SESSION['userdata']['Sno'];
 
@@ -11,7 +11,7 @@
     $update_user_status = mysqli_query($connect, "UPDATE voters SET status = 1 WHERE Sno = '$uid'");
 
     if ($update_user_status ==1) {
-        $update_votes = mysqli_query($connect, "UPDATE cadidate SET votes = '$total_votes' WHERE Sno = '$sno'");
+        $update_votes = mysqli_query($connect, "UPDATE cadidate SET votes = '$votes + 1' WHERE Sno = '$sno'");
         $groups= mysqli_query($connect, "SELECT * from cadidate where role=2");
         $groupsData = mysqli_fetch_all($groups, MYSQLI_ASSOC);
         $_SESSION['userdata']['status'] = 1;
