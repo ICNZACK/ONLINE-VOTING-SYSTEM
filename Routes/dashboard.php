@@ -98,7 +98,7 @@
         <?php
             if($_SESSION['groupsdata']){
                 for($i=0; $i<count($groupsData); $i++){
-                    $var1= $groupsData[$i]['Sno'];
+                    //$var1= $groupsData[$i]['Sno'];
                     ?>
                     <div>
                         <img style= "float: right" src="../uplords/<?php echo $groupsData[$i]['photo']?>" height="70" width="70">
@@ -108,7 +108,7 @@
                         <form action="vote.php" method="POST">
                             <input type="hidden" name="gvotes" value="<?php echo $groupsData[$i]['votes']?>">
                             <!-- <input type="hidden" name="gid" value=""> -->
-                            <input type="hidden" name='sno' value=$var1>
+                            <input type="hidden" name='sno' value=<?php echo $groupsData[$i]['Sno']?>>
                             <?php
                                 if($_SESSION['userdata']['status']==0){
                                     ?>
