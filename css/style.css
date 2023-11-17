@@ -229,6 +229,10 @@ transition: transform 0.3s ease-in-out;
 transform: scale(1.08);
 }
 
+.text{
+	color: white;
+}
+
 .box:nth-child(1) {
 background-color: var(--one-use-color);
 }
