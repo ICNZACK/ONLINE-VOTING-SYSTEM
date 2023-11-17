@@ -9,11 +9,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/voter.css">
     <title>Details</title>
 </head>
 <body>
 <style>
-        body{
+/*         body{
         background-color: aqua;
     
     }
@@ -45,12 +46,12 @@
         float: right;
         margin : 15px;
     
-    } 
+    }  */
     </style>
 <div id="mainSection">
         <center>
     <div id="headerSection">
-        <a href="login.html"><button id="backbtn">Back</button></a>
+        <a href="DASHBOARD.html"><button id="backbtn">Back</button></a>
         <a href="logout.php"><button id="logoutbtn">Logout</button></a>
         <h1>Voters Details</h1>
     </div>
