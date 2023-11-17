@@ -5,13 +5,13 @@
     $email= $_POST['email'];
     $feedback= $_POST['message'];
 
-    $insert = mysqli_query($connect, "INSERT INTO contact (Name, Email, Feedback) VALUES ($name, $email, $message)");
+    $insert = mysqli_query($connect, "INSERT INTO contact (Name, Email, Feedback) VALUES ('$name', '$email', '$feedback')");
 
     if($insert){
         echo '
         <script>
         alert("Feedback Submited..");
-        window.location = "index.html";
+        window.location = "../";
         </script>
         ';
     }
