@@ -47,8 +47,8 @@
 .container{
     width: 100%;
     height: 100vh;
-    background: url("../css/img/contactus.png") no-repeat;
-    background-size: 1365px;
+    background: url("../css/img/Contactus.png") no-repeat;
+    background-size: 1280px;
     display: flex;
     align-items: center;
     justify-content: center;
