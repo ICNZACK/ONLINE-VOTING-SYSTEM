@@ -76,6 +76,17 @@
     <title>Document</title>
 </head>
 <body>  
+    <style>
+        #resultbtn{
+        padding: 5px;
+        font-size: 15px;
+        background-color: blue;
+        color: aliceblue;
+        border-radius: 5px;
+        float: right;
+        margin : 15px;
+       }
+    </style>
 
     <div id="mainSection">
         <center>
