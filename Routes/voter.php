@@ -13,41 +13,7 @@
     <title>Details</title>
 </head>
 <body>
-<style>
-/*         body{
-        background-color: aqua;
-    
-    }
 
-    #headerSection{
-        padding: 5px;
-    }
-
-    #headerSection h1{
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-
-    #backbtn{
-        padding: 5px;
-        font-size: 15px;
-        background-color: blue;
-        color: aliceblue;
-        border-radius: 5px;
-        float: left;
-        margin : 15px;
-    }
-
-    #logoutbtn{
-        padding: 5px;
-        font-size: 15px;
-        background-color: blue;
-        color: aliceblue;
-        border-radius: 5px;
-        float: right;
-        margin : 15px;
-    
-    }  */
-    </style>
 <div id="mainSection">
         <center>
     <div id="headerSection">
