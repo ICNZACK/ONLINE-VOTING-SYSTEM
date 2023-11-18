@@ -13,7 +13,7 @@
 </head>
 <body>
 <style>
-        body{
+/*         body{
         background-color: aqua;
     
     }
@@ -45,7 +45,7 @@
         float: right;
         margin : 15px;
     
-    } 
+    }  */
     </style>
 <div id="mainSection">
         <center>
