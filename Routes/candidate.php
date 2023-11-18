@@ -17,7 +17,7 @@
 <div id="mainSection">
         <center>
     <div id="headerSection">
-        <a href="login.html"><button id="backbtn">Back</button></a>
+        <a href="DASHBOARD.html"><button id="backbtn">Back</button></a>
         <a href="logout.php"><button id="logoutbtn">Logout</button></a>
         <h1>Candidate Details</h1>
     </div>
