@@ -62,11 +62,13 @@
     <center>
     <table border='5' height=300 width=85%>
         <tr>
+            <h2>
             <th>Id</th>
             <th>Name</th>
             <th>Voter_id</th>
             <th>Number</th>
             <th>Email</th>
+            </h2>
         </tr>
     </center>
     
