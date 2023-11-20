@@ -9,17 +9,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/candidate.css">
-    <title>Details</title>
+    <link rel="stylesheet" href="../CSS/result.css">
+    <title>Result</title>
 </head>
 <body>
 
 <div id="mainSection">
         <center>
     <div id="headerSection">
-        <a href="DASHBOARD.html"><button id="backbtn">Back</button></a>
+        <a href="login.html"><button id="backbtn">Back</button></a>
         <a href="logout.php"><button id="logoutbtn">Logout</button></a>
-        <h1>Candidate Details</h1>
+        <h1>Voting Result</h1>
     </div>
     </center>
     <hr>
@@ -29,10 +29,8 @@
     <table border='5' height=300 width=85%>
         <tr>
             <th>Id</th>
-            <th>Name</th>
-            <th>Voter_id</th>
-            <th>Number</th>
-            <th>Email</th>
+            <th>Party Name</th>
+            <th>Votes</th>
         </tr>
     </center>
     
@@ -43,9 +41,7 @@
                     <tr>
                         <td>$row[Sno]</td>
                         <td>$row[Name]</td>
-                        <td>$row[Voter_id]</td>
-                        <td>$row[number]</td>
-                        <td>$row[Email]</td>
+                        <td>$row[votes]</td>
                     </tr>";
                 }
             }

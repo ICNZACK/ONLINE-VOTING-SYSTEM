@@ -62,8 +62,8 @@ body{
 }
 .wrapper{
     position: relative;
-    width: 400px;
-    height: 440px;
+    width: 370px;
+    height: 400px;
     background: transparent;
     border: 2px solid #b7c5ca;
     border-radius: 20px;

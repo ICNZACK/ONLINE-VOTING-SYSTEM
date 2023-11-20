@@ -76,11 +76,23 @@
     <title>Document</title>
 </head>
 <body>  
+    <style>
+        #resultbtn{
+        padding: 5px;
+        font-size: 15px;
+        background-color: blue;
+        color: aliceblue;
+        border-radius: 5px;
+        float: right;
+        margin : 15px;
+       }
+    </style>
 
     <div id="mainSection">
         <center>
     <div id="headerSection">
         <a href="login.html"><button id="backbtn">Back</button></a>
+        <a href="result_user.php"><button id="resultbtn">Result</button></a>
         <a href="logout.php"><button id="logoutbtn">Logout</button></a>
         <h1>Online Voting system</h1>
     </div>
