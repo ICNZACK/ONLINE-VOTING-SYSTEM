@@ -1,20 +1,4 @@
 <?php
-/*        session_start();
-       if(!isset($_SESSION['userdata'])){
-           header("location: login.html");
-       }
-   
-       $userdata = $_SESSION['userdata'];
-       $groupsdata = $_SESSION['groupsdata'];
-   
-       if($_SESSION['userdata']['status']==0){
-           $status= '<b style="color:red">Not voted</b>';
-       }
-       else{
-           $status= '<b style="color:green">voted</b>';
-       }  */
-   
-   // Define a SessionManager class to handle session operations
    class SessionManager {
        public function startSession() {
            session_start();
@@ -35,7 +19,7 @@
        }
    }
    
-   // Define a User class to represent user data
+
    class User {
        private $userData;
    
@@ -48,23 +32,20 @@
        }
    }
    
-   // Instantiate the SessionManager class
+
    $sessionManager = new SessionManager();
    
-   // Start the session
    $sessionManager->startSession();
    
-   // Check if the user is logged in
    $sessionManager->checkUserSession();
    
-   // Retrieve user and groups data
+   
    $userData = $sessionManager->getUserData();
    $groupsData = $sessionManager->getGroupsData();
    
-   // Instantiate the User class
    $user = new User($userData);
    
-   // Get the user's status
+
    $status = $user->getStatus(); 
 ?>
 <!DOCTYPE html>
