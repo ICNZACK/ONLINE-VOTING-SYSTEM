@@ -1,14 +1,9 @@
 <?php
-    /*
- */
-
- // Start the session
  session_start();
  
- // Include the database connection file (_dbconnect.php)
+ 
  include("_dbconnect.php");
  
- // Define a UserAuthentication class for user authentication
  class UserAuthentication {
      private $connect;
  
@@ -34,10 +29,10 @@
      }
  }
  
- // Instantiate the UserAuthentication class with the database connection
+ 
  $userAuthentication = new UserAuthentication($connect);
  
- // Handle user authentication
+ 
  if ($_SERVER["REQUEST_METHOD"] == "POST") {
      $voterid = $_POST['voterid'];
      $password = $_POST['password'];
