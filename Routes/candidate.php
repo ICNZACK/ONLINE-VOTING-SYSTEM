@@ -29,7 +29,7 @@
     <table border='5' height=300 width=85%>
         <tr>
             <th>Id</th>
-            <th>Name</th>
+            <th>Party Name</th>
             <th>Voter_id</th>
             <th>Number</th>
             <th>Email</th>
