@@ -62,10 +62,10 @@
         ';
     } */
 
-    // Include the database connection file (_dbconnect.php)
+
     include("_dbconnect.php");
     
-    // Define a Registration class to handle user registration
+
     class Registration {
         private $connect;
     
@@ -92,10 +92,9 @@
         }
     }
     
-    // Instantiate the Registration class with the database connection
     $registration = new Registration($connect);
     
-    // Handle the registration process
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = $_POST['name'];
         $voterid = $_POST['voterid'];
