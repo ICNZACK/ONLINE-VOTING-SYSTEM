@@ -18,7 +18,7 @@
         <center>
     <div id="headerSection">
         <a href="DASHBOARD.html"><button id="backbtn">Back</button></a>
-        <a href="logout.php"><button id="logoutbtn">Logout</button></a>
+        <a href="Admin.html"><button id="logoutbtn">Logout</button></a>
         <h1>Voters Details</h1>
     </div>
     </center>
