@@ -1,5 +1,6 @@
 <?php
- session_start();
+
+  session_start();
  
  
  include("_dbconnect.php");
@@ -13,6 +14,7 @@
  
      public function authenticateUser($voterid, $password, $role) {
          $check = mysqli_query($this->connect, "SELECT * FROM voters WHERE Voter_id='$voterid' AND password='$password' AND role='$role'");
+         $check1 = mysqli_query($this->connect, "SELECT * FROM cadidate WHERE Voter_id='$voterid' AND password='$password' AND role='$role'");
          
          if (mysqli_num_rows($check) > 0) {
              $userdata = mysqli_fetch_array($check);
@@ -23,8 +25,19 @@
              $_SESSION['groupsdata'] = $groupsdata;
              
              return true;
-         } else {
-             return false;
+         } elseif (mysqli_num_rows($check1) > 0){
+            $userdata = mysqli_fetch_array($check1);
+            $groups = mysqli_query($this->connect, "SELECT * FROM cadidate WHERE role=2");
+            $groupsdata = mysqli_fetch_all($groups, MYSQLI_ASSOC);
+            
+            $_SESSION['userdata'] = $userdata;
+            $_SESSION['groupsdata'] = $groupsdata;
+
+        return true;
+
+    }
+    else{
+        return false;
          }
      }
  }
@@ -54,5 +67,5 @@
          ';
      }
  }
- ?>
+ ?> 
 
